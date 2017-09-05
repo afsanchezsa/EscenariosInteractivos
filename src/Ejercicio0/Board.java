@@ -38,12 +38,16 @@ timer.start();
         g.drawPolygon(x, y, 3);
         */
         //----------
-         
-        g.drawRect(xref,40,50,20);
+          g.setColor(Color.blue);
+        g.fillRect(xref,40,50,20);
         int xPoints[]={xref+10,xref+15,xref+40,xref+45};
         int yPoints[]={40,20,20,40};
         g.drawPolygon(xPoints, yPoints, 4);
+       
         g.drawRect(xref2,40,50,20);
+        g.setColor(Color.black);
+        g.fillOval(xref, 60, 15, 15);
+        g.fillOval(xref+30, 60, 15, 15);
         
         
     }
