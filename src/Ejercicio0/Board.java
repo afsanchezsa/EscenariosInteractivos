@@ -46,6 +46,8 @@ this.numImagen=0;
         */
         //----------
         Image fondo=loadImage("fondo.png");
+        Image personaje=loadImage("clouds.png");
+        
         g.drawImage(fondo,0,0,this);
           g.setColor(Color.blue);
         g.fillRect(xref,40,50,20);
