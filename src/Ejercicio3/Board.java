@@ -25,6 +25,7 @@ public class Board extends JPanel implements MouseListener{
     public Board() {
         this.color=Color.RED;
         this.addMouseListener(this);
+        
     }
 
     
@@ -78,7 +79,7 @@ public class Board extends JPanel implements MouseListener{
     //Es llamado cuando se oprime un botón en el Mouse.
     @Override
     public void mousePressed(MouseEvent e) {
-       
+        System.out.println("click");
     }
 
     // Ocurre cuando se suelta un botón en el Mouse.

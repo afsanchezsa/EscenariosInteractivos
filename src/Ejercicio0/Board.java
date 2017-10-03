@@ -8,14 +8,17 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class Board extends JPanel implements ActionListener {
+public class Board extends JPanel implements ActionListener, MouseListener {
     private int xref=5;
     private int xref2=1500;
     private final int DELAY=25;
@@ -27,6 +30,7 @@ timer=new Timer(this.DELAY,this);//que lanze el evento action listener sobre est
 timer.start();
 this.xGato=0;
 this.numImagen=0;
+addMouseListener(this);
         
 
 }
@@ -113,4 +117,36 @@ this.numImagen=0;
     return image;
     
     }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        System.out.println("click Mouse");
+        Point mp=e.getPoint();
+        Rectangle gato=new Rectangle(this.xref,40,30,30);
+        if(gato.contains(mp)){
+        this.timer.stop();
+        
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+       
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+       
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        
+    }
+    
 }
